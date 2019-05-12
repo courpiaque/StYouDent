@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StYouDent.Views.RightHandPage">
+    <AbsoluteLayout>
+        <StackLayout AbsoluteLayout.LayoutBounds="0.5, 0.05, 0.8, 100" 
+               AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional">
+            <Label Text="Dodaj ogłoszenie:"
+               HorizontalOptions="Center"
+               FontSize="Large"/>
+            <Label Text="Oddam..."
+               HorizontalOptions="Center"
+               FontSize="Large"/>
+        </StackLayout>
+        <StackLayout AbsoluteLayout.LayoutBounds="0.5, 0.5, 1, 0.5" AbsoluteLayout.LayoutFlags="All">
+            <Label Text="{Binding Category, Mode=TwoWay}" HorizontalOptions="Center" FontSize="Large"/>
+            <Button Text="Kategorie" Clicked="Category_Button"/>
+            <Entry Placeholder="Oddam... (max 15 znaków)"/>
+            <Editor Placeholder="Opcjonalny opis... (max 200 znaków)" VerticalOptions="FillAndExpand"/>
+        </StackLayout>
+        <Button Text="Dodaj ogłoszenie" AbsoluteLayout.LayoutBounds="1, 0.95, 1, 50"
+                AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional"/>
+    </AbsoluteLayout>
+</ContentPage>

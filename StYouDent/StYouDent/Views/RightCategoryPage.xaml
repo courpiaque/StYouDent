@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StYouDent.Views.RightCategoryPage">
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <Label Text="Do oddania:" Margin="20" FontSize="Large" HorizontalOptions="Center"/>
+        <Button Text="Pomoc dydaktyczna" Margin="20" Clicked="Button_Clicked"/>
+        <Button Text="Akcesoria" Margin="20" Clicked="Button_Clicked"/>
+        <Button Text="Prowiant" Margin="20" Clicked="Button_Clicked"/>
+        <Button Text="Zguba" Margin="20" Clicked="Button_Clicked"/>
+        <Button Text="Inna" Margin="20" Clicked="Button_Clicked"/>
+    </StackLayout>
+</ContentPage>

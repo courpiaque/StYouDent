@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:StYouDent"
+             x:Class="StYouDent.MainPage">
+
+    <StackLayout>
+        <StackLayout Orientation="Horizontal" BackgroundColor="AntiqueWhite" HeightRequest="50">
+            <Label Text="{Binding School}" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="Medium"/>
+            <Label Text="{Binding Index}" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="Medium"/>
+            <ImageButton BackgroundColor="AntiqueWhite" Clicked="ImageButton_Clicked" Source="set.png" HorizontalOptions="End" Margin="0, 0, 5, 0"/>
+        </StackLayout>
+        <Label Text="Najnowsze ogłoszenia" FontSize="Large" HorizontalOptions="Center"/>
+        <StackLayout Orientation="Horizontal">
+            <StackLayout>
+                <Label Text="Potrzebna pomoc" HorizontalOptions="Center"/>
+                <ListView ItemsSource="{Binding Items}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding title}" Detail="{Binding fullName}"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Do wzięcia" HorizontalOptions="Center"/>
+                <ListView ItemsSource="{Binding Items}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
