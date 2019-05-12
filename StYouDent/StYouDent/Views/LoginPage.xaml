@@ -1,10 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="StYouDent.Views.LoginPage">
-    <StackLayout VerticalOptions="Center">
-        <Entry x:Name="email_lbl" Placeholder="E-mail"/>
-        <Entry x:Name="pass_lbl" Placeholder="Hasło" IsPassword="True"/>
-        <Button Text="Zaloguj" Clicked="Button_Clicked"/>
-    </StackLayout>
+             x:Class="StYouDent.Views.LoginPage"
+             BackgroundColor="White">
+    <AbsoluteLayout>
+        <StackLayout AbsoluteLayout.LayoutBounds="0.5, 0.4, 0.9, 0.5" AbsoluteLayout.LayoutFlags="All">
+            <Label Text="Zaloguj się na swoje konto" FontSize="Medium" HorizontalOptions="Center" TextColor="DeepSkyBlue" Margin="20"/>
+            <Entry x:Name="email_lbl" Placeholder="E-mail" PlaceholderColor="LightBlue"/>
+            <Entry x:Name="pass_lbl" Placeholder="Hasło" IsPassword="True" PlaceholderColor="LightBlue"/>
+            <Button Text="Zaloguj" Clicked="Button_Clicked" BackgroundColor="DeepSkyBlue" TextColor="White"/>
+            <Button Text="Nie masz konta? Zarejestruj się za darmo!" BackgroundColor="White" Clicked="Register_Clicked"/>
+        </StackLayout>
+    </AbsoluteLayout>
 </ContentPage>

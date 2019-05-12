@@ -32,5 +32,10 @@ namespace StYouDent.Views
         {
             await viewModel.SendLogin(email_lbl.Text, pass_lbl.Text);
         }
+
+        private void Register_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

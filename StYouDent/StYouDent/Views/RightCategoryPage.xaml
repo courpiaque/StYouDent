@@ -4,10 +4,10 @@
              x:Class="StYouDent.Views.RightCategoryPage">
     <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
         <Label Text="Do oddania:" Margin="20" FontSize="Large" HorizontalOptions="Center"/>
-        <Button Text="Pomoc dydaktyczna" Margin="20" Clicked="Button_Clicked"/>
-        <Button Text="Akcesoria" Margin="20" Clicked="Button_Clicked"/>
-        <Button Text="Prowiant" Margin="20" Clicked="Button_Clicked"/>
-        <Button Text="Zguba" Margin="20" Clicked="Button_Clicked"/>
-        <Button Text="Inna" Margin="20" Clicked="Button_Clicked"/>
+        <Button Text="Pomoc dydaktyczna" Margin="20" Clicked="Button_Clicked" BackgroundColor="DeepSkyBlue" TextColor="White"/>
+        <Button Text="Akcesoria" Margin="20" Clicked="Button_Clicked" BackgroundColor="DeepSkyBlue" TextColor="White"/>
+        <Button Text="Prowiant" Margin="20" Clicked="Button_Clicked" BackgroundColor="DeepSkyBlue" TextColor="White"/>
+        <Button Text="Zguba" Margin="20" Clicked="Button_Clicked" BackgroundColor="DeepSkyBlue" TextColor="White"/>
+        <Button Text="Inna" Margin="20" Clicked="Button_Clicked" BackgroundColor="DeepSkyBlue" TextColor="White"/>
     </StackLayout>
 </ContentPage>
