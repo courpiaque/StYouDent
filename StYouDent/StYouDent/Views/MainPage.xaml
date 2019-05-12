@@ -14,7 +14,7 @@
         <StackLayout Orientation="Horizontal">
             <StackLayout>
                 <Label Text="Potrzebna pomoc" HorizontalOptions="Center"/>
-                <ListView ItemsSource="{Binding Items}">
+                <ListView ItemsSource="{Binding Helps}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <TextCell Text="{Binding title}" Detail="{Binding fullName}"/>
@@ -27,7 +27,7 @@
                 <ListView ItemsSource="{Binding Items}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-
+                            <TextCell Text="{Binding title}" Detail="{Binding fullName}"/>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
