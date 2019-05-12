@@ -30,5 +30,14 @@ namespace StYouDent.Views
         {
             Navigation.PushModalAsync(new RightCategoryPage(_viewModel));
         }
+
+        private async void Add_Button(object sender, EventArgs e)
+        {
+            await _viewModel.AddNote(name_lbl.Text, category_lbl.Text, description_lbl.Text);
+            await DisplayAlert("Ogłoszenie dodane!", "Wkrótce pojawi się w aktualnościach", "OK");
+            name_lbl.Text = "";
+            category_lbl.Text = "Wybierz kategorię";
+            description_lbl.Text = "";
+        }
     }
 }

@@ -34,7 +34,7 @@ namespace StYouDent.ViewModels
         {
             string json = "{\"name\":\"" + name + "\",\"category\":\"" + category + "\",\"description\":\"" + description + "\",\"author\":\"" + _user.Id +"\"}";
             System.Diagnostics.Debug.Write(json);
-            await _serverService.SendRequest(json, "https://hackathon-student-backend.herokuapp.com/create_ad");
+            await _serverService.SendRequest(json, "https://hackathon-student-backend.herokuapp.com/create_help");
         }
     }
 }

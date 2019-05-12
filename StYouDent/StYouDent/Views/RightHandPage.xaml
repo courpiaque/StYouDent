@@ -13,12 +13,13 @@
                FontSize="Large"/>
         </StackLayout>
         <StackLayout AbsoluteLayout.LayoutBounds="0.5, 0.5, 1, 0.5" AbsoluteLayout.LayoutFlags="All">
-            <Label Text="{Binding Category, Mode=TwoWay}" HorizontalOptions="Center" FontSize="Large"/>
-            <Button Text="Kategorie" Clicked="Category_Button"/>
-            <Entry Placeholder="Oddam... (max 15 znaków)"/>
-            <Editor Placeholder="Opcjonalny opis... (max 200 znaków)" VerticalOptions="FillAndExpand"/>
+            <Label x:Name="category_lbl" Text="{Binding Category, Mode=TwoWay}" HorizontalOptions="Center" FontSize="Large"/>
+            <Button  Text="Kategorie" Clicked="Category_Button"/>
+            <Entry x:Name="name_lbl" Placeholder="Oddam... (max 15 znaków)"/>
+            <Editor x:Name="description_lbl" Placeholder="Opcjonalny opis... (max 200 znaków)" VerticalOptions="FillAndExpand"/>
         </StackLayout>
         <Button Text="Dodaj ogłoszenie" AbsoluteLayout.LayoutBounds="1, 0.95, 1, 50"
-                AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional"/>
+                AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional"
+                Clicked="Add_Button"/>
     </AbsoluteLayout>
 </ContentPage>
