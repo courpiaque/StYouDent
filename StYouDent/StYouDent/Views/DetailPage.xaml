@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StYouDent.Views.DetailPage">
+    <StackLayout Margin="20">
+        <Label Text="{Binding title}" FontSize="40" TextDecorations="Underline" FontAttributes="Bold" HorizontalOptions="Center" TextColor="Black"/>
+        <StackLayout Orientation="Horizontal" Margin="0, 20, 0, 0">
+            <Label Text="{Binding fullName}" FontSize="Medium" HorizontalOptions="StartAndExpand" />
+            <Label Text="{Binding created}" FontSize="Medium" HorizontalOptions="End" TextColor="Red"/>
+        </StackLayout>
+            <Label Text="{Binding description}" FontSize="Large" Margin="0, 20, 0, 0"/>
+    </StackLayout>
+</ContentPage>

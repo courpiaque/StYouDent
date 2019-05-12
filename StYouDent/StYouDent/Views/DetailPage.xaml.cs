@@ -1,4 +1,6 @@
-﻿using System;
+﻿using StYouDent.Models;
+using StYouDent.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,11 +12,13 @@ using Xamarin.Forms.Xaml;
 namespace StYouDent.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ChatPage : ContentPage
+    public partial class DetailPage : ContentPage
     {
-        public ChatPage()
+        public DetailPage(Item item)
         {
             InitializeComponent();
+
+            BindingContext = item;
         }
     }
 }

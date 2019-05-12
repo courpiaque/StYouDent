@@ -35,7 +35,7 @@ namespace StYouDent.Views
 
         private void Register_Clicked(object sender, EventArgs e)
         {
-
+            Device.OpenUri(new Uri("https://hackathon-student-frontend.herokuapp.com/"));
         }
     }
 }

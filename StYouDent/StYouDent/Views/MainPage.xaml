@@ -15,7 +15,7 @@
         <StackLayout Orientation="Horizontal">
             <StackLayout>
                 <Label Text="#Pomocy" FontSize="Medium" HorizontalOptions="Center" TextDecorations="Underline"/>
-                <ListView ItemsSource="{Binding Helps}">
+                <ListView ItemsSource="{Binding Helps}" ItemSelected="ListView_ItemSelected">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <TextCell Text="{Binding title}" Detail="{Binding fullName}"/>
@@ -25,7 +25,7 @@
             </StackLayout>
             <StackLayout>
                 <Label Text="#Oddam" FontSize="Medium" HorizontalOptions="Center" TextDecorations="Underline"/>
-                <ListView ItemsSource="{Binding Items}">
+                <ListView ItemsSource="{Binding Items}" ItemSelected="ListView_ItemSelected">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <TextCell Text="{Binding title}" Detail="{Binding fullName}"/>

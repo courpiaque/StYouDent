@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using StYouDent.Models;
 using StYouDent.Persistance;
+using StYouDent.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -56,5 +57,5 @@ namespace StYouDent.ViewModels
             Items.Clear();
             Helps.Clear();
         }
-	}
+    }
 }

@@ -1,4 +1,6 @@
-﻿using StYouDent.ViewModels;
+﻿using StYouDent.Models;
+using StYouDent.ViewModels;
+using StYouDent.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,6 +45,11 @@ namespace StYouDent
         private void ImageButton_Clicked(object sender, EventArgs e)
         {
 
+        }
+
+        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            Navigation.PushModalAsync(new DetailPage((Item)e.SelectedItem));
         }
     }
 }
