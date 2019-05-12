@@ -15,8 +15,9 @@ namespace StYouDent.ViewModels
         public string School { get; private set; }
 
         public ObservableCollection<Item> Items { get; private set; } = new ObservableCollection<Item>();
+		public ObservableCollection<Item> Helps { get; private set; } = new ObservableCollection<Item>();
 
-        private IServerService _serverService;
+		private IServerService _serverService;
 
         private User _user;
 
@@ -28,15 +29,32 @@ namespace StYouDent.ViewModels
             School = _user.school;
         }
 
-        public async Task LoadList()
+        public async Task LoadHelps()
         {
-            var json = await _serverService.GetRequest("https://hackathon-student-backend.herokuapp.com/offers/" + _user.Id);
+            var json = await _serverService.GetRequest("https://hackathon-student-backend.herokuapp.com/help/" + _user.Id);
             var list = JsonConvert.DeserializeObject<List<Item>>(json);     
 
             foreach (var i in list)
-                Items.Add(i);
-
-            System.Diagnostics.Debug.Write("Chuj");               
+                Helps.Add(i);          
         }
-    }
+
+		public async Task LoadItems()
+		{
+			var json = await _serverService.GetRequest("https://hackathon-student-backend.herokuapp.com/offers/" + _user.Id);
+			var list = JsonConvert.DeserializeObject<List<Item>>(json);
+
+			foreach (var i in list)
+				Items.Add(i);
+		}
+		public async void LoadList()
+		{
+			await LoadItems();
+			await LoadHelps();
+		}
+        public void Disappear()
+        {
+            Items.Clear();
+            Helps.Clear();
+        }
+	}
 }

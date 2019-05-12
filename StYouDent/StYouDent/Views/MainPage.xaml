@@ -27,7 +27,7 @@
                 <ListView ItemsSource="{Binding Items}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-
+                            <TextCell Text="{Binding title}" Detail="{Binding fullName}"/>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>

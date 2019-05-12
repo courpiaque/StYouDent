@@ -34,6 +34,12 @@ namespace StYouDent
             base.OnAppearing();
         }
 
+        protected override void OnDisappearing()
+        {
+            _viewModel.Disappear();
+            base.OnDisappearing();
+        }
+
         private void ImageButton_Clicked(object sender, EventArgs e)
         {
 
